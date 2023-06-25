@@ -71,7 +71,7 @@ body .menu
     position: absolute;
     opacity: 0; /* Initially set opacity to 0 */
     left: 0;
-    width: 25%;
+    width: 30%;
     height: 100vh;
     background-color: #00030adf;
     backdrop-filter: blur(10px);
