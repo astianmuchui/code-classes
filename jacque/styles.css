@@ -1,0 +1,134 @@
+
+* /* All Elements */
+{
+    color: #ffff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    background-color: rgb(8, 137, 172);
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Path: styles.css */
+
+body header
+{
+    width: 100%;
+    height: 60px;
+    background-color: #00030a;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    display: inline-flex;
+}
+
+body header .title
+{
+    position: relative;
+    left: 10px;
+}
+
+body header .hamburger
+{
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    height: 32px;
+    width: 34px;
+    background-color: #ffff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    cursor: pointer;
+}
+
+body header .hamburger div
+{
+    height: 3px;
+    width: 90%;
+    background-color: #000;
+    margin-bottom: 4px;
+}
+
+body .menu
+{
+    display: none;
+    position: absolute;
+    opacity: 0; /* Initially set opacity to 0 */
+    left: 0;
+    width: 25%;
+    height: 100vh;
+    background-color: #00030adf;
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    animation-delay: 0.2s;
+    animation: slideIn 1s ease-in forwards 1;
+
+}
+
+/* Animation */
+
+@keyframes slideIn
+{
+    from
+    {
+        left: -50px;
+        opacity: 0.5;
+    }
+    to
+    {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+body .menu span
+{
+    position: relative;
+    top: 20px;
+    left: 45px;
+    font-size: 30px;
+    color: #ffff;
+    cursor: pointer;    
+}
+
+body .menu ul
+{
+    position: relative;
+    top: 50px;
+    left: 1px;
+    width: 70%;
+    
+}
+
+body .menu ul li
+{
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgb(23, 20, 72);
+    padding: 10px;
+    align-items: flex-start;
+}
+
+
+@media screen and (max-width: 900px)
+{
+    body .menu
+    {
+        width: 55%;
+    }
+}
