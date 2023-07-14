@@ -109,7 +109,7 @@
         * %
         * *
         * /
-        *
+        * ! Logical NOT
         */
 
         $buffer = 10;
@@ -131,6 +131,19 @@
                 break;
         }
 
+
+        // Associative Array
+
+        $info = array(
+
+                "name" => "gakeni",
+                "age" => 19,
+                "cool" => true,
+                "fruits" => ["apple", "mango", "orange"],
+                "names" => array("gakeni", "sifa")
+        );
+
+        echo $info["fruits"][0];
 ?>
 
 <!DOCTYPE html>
