@@ -2,10 +2,7 @@
 
     session_start();
 
-    $username = "gakenii"; /* Hard coded username */
-    $password = '$2y$10$slADyjMk2DPezaBPbjrEletBXxOgoU00xs7xuwyVar0G.Obewm8ei'; /* Hard coded password ( 123456 ) */
-
-    if (isset($_POST['login'])) /* Check if login button was clicked */
+    if (isset($_POST['signup'])) /* Check if login button was clicked */
     {
         // echo "Login button was clicked";
 
@@ -14,33 +11,11 @@
 
         if ( !empty($_POST['uname']) && !empty($_POST['pwd']) ) /* check if both values are not empty */
         {
-            // echo $_POST['uname'] . "<br>";
-            // echo $_POST['pwd'];
 
-            if ($_POST['uname'] ==  $username)
-            {
-                // Username is correct
+            $_SESSION['uname'] = $_POST['uname'];
+            $_SESSION['logged_in'] = true;
 
-                if (password_verify($_POST['pwd'], $password))
-                {
-                    // Password is correct
-
-                    $_SESSION['uname'] = $_POST['uname'];
-                    $_SESSION['logged_in'] = true;
-
-                    header("Location: user.php");
-
-                    echo "Login successful";
-                }
-                else
-                {
-                    echo "Invalid password";
-                }
-            }
-            else
-            {
-                echo "Invalid username";
-            }
+            header("Location: user.php");             
 
         }
     }
@@ -73,7 +48,7 @@
         {
             width: 300px;
             margin: 0 auto;
-            background-color: #2fa4e7;
+            background-color: #800000;
             padding: 100px;
             margin-top: 20px;
 
@@ -106,7 +81,7 @@
 
         <input type="password" placeholder="password" autocomplete="off" name="pwd">
 
-        <button type="submit" name="login"> Login </button>
+        <button type="submit" name="signup"> Signup </button>
 
     </form>
 
