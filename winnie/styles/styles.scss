@@ -1,0 +1,119 @@
+@import 'root';
+
+body
+{
+    background-color: $dark-color;
+    overflow-x: hidden;
+
+    header
+    {
+        width: 100%;
+        height: 60px;
+        // background-color: darken($primary-color, 80%);
+        background: linear-gradient(to right, darken($primary-color, 92%), darken($primary-color, 95%));
+        box-sizing: border-box;
+        padding: 0.1% 1%;
+        .logo
+        {
+            font-size: 20px;
+            color: #fff;
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+
+        nav
+        {
+            width: max-content;
+            position: relative;
+            left: 70%;
+            top: -20px;
+            box-sizing: border-box;
+            padding: 5px;
+            display: inline-flex;
+
+            li
+            {
+                margin: 0 10px;
+
+                a
+                {
+                    transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
+                    color: $primary-color;
+                    font-size: 14px;
+
+                    &:hover
+                    {
+                        color: $secondary-color;
+                    }
+                }
+
+            }
+        }
+    }
+
+    main
+    {
+        width: 100%;
+        height: 92vh;
+        background: url("../img/water.jpg");
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        top: 0;
+
+        .overlay
+        {
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            background: rgba(black, 0.7);
+            backdrop-filter: blur(7px);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            *
+            {
+                color: #fff;
+                margin-bottom: 2%;
+            }
+
+            h1
+            {
+                color: $secondary-color;
+                text-transform: capitalize;
+                font-size: 60px;
+                opacity: 0;
+                animation: moveup 1s cubic-bezier(0.755, 0.05, 0.855, 0.06) forwards;
+                animation-delay: 1s;
+            }
+
+            p
+            {
+                font-size: 19px;
+                opacity: 0;
+                animation: moveup 1s cubic-bezier(0.755, 0.05, 0.855, 0.06) forwards;
+                animation-delay: 1.5s;
+            }
+
+            .btn
+            {
+                border: 1px solid $secondary-color;
+                padding: 15px 30px;
+                border-radius: 10px;
+                transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
+                opacity: 0;
+                animation: moveup 1s cubic-bezier(0.755, 0.05, 0.855, 0.06) forwards;
+                animation-delay: 2s;
+
+                &:hover
+                {
+                    background-color: $secondary-color;
+                }
+            }
+        }
+    }
+}
