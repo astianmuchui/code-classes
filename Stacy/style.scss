@@ -1,0 +1,109 @@
+@import 'root';
+
+body
+{
+    background-color: lighten($primary-color, 90%);
+    overflow-x: hidden;
+
+    header
+    {
+        width: 100%;
+        height: 60px;
+        background-color: lighten($primary-color, 5%);
+
+        .logo
+        {
+            position: relative;
+            top: 10px;
+            left: 10px;
+
+            p
+            {
+                color: $secondary-color;
+                font-size: 30px;
+                font-weight: bold;
+            }
+        }
+
+        nav
+        {
+            position: relative;
+            left: 60%;
+            margin: 0;
+            padding: 0;
+            width: max-content;
+            height: max-content;
+            top: -15px;
+
+            ul
+            {
+                display: inline-flex;
+
+                li
+                {
+                    margin: 0 5px;
+
+                    a
+                    {
+                        color: #fff;
+
+                        &:hover
+                        {
+                            color: $secondary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    main
+    {
+        width: 100%;
+        height: 92vh;
+        background: url("./img/bg.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        .container
+        {
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba($primary-color, 0.7);
+            backdrop-filter: blur(5px);
+
+            *
+            {
+                margin-bottom: 2%;
+            }
+
+            h1
+            {
+                color: $secondary-color;
+                font-size: 40px;
+                text-transform: capitalize;
+            }
+
+            p
+            {
+                color: #fff;
+            }
+
+            a
+            {
+                width: max-content;
+                height: max-content;
+                padding: 15px 30px;
+                color: #fff;
+                background-color: $secondary-color;
+                border-radius: 10px;
+            }
+        }
+    }
+}
