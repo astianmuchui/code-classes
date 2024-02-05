@@ -10,3 +10,47 @@ $secondary-color: #9338fa;
     list-style-type: none;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+
+.center-xy
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@for $i from 1 through 10
+{
+    .grid-#{$i}
+    {
+        display: grid;
+        grid-template-columns: repeat($i, 1fr);
+        grid-gap: 10px;
+    }
+}
+
+/**
+* @while
+* @for
+* @each
+*/
+
+// @keyframes animationName {
+
+// }
+
+@keyframes riseUp
+{
+    from
+    {
+        top: 10px;
+        opacity: 0;
+    }
+
+    to
+    {
+        top: 0;
+        opacity: 1;
+    }
+}
